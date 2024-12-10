@@ -4,6 +4,13 @@
     margin-top: 50px;
 }
 
+.login-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .register-section {
 
     body {
