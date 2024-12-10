@@ -1,12 +1,16 @@
-
-.login-section, .order-section {
+.login-section,
+.order-section {
     text-align: center;
     margin-top: 50px;
 }
 
-
+p {
+    color: #220901;
+}
 
 .menu-section {
+    padding: 20px;
+    padding-top: 0px;
     margin: 30px;
     text-align: center;
     background-image: url(background.jpg)
@@ -14,24 +18,26 @@
 
 .menu-list {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 16px;
     margin-top: 30px;
     align-items: center;
+    justify-content: center;
 }
+
 
 /* Styling each menu item as a row */
 .menu-item {
+    flex: 0 0 25%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    max-width: 1000px;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 30px;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
 }
 
 .menu-item img {
@@ -39,12 +45,6 @@
     height: 160px;
     border-radius: 8px;
     object-fit: cover;
-}
-
-.menu-details {
-    flex: 1;
-    margin-left: 20px;
-    text-align: left;
 }
 
 .menu-details p {
@@ -125,12 +125,15 @@
 
 /* Total Section */
 .total-section {
-    margin-top: 15px;
-    font-size: 1.5rem;
-    color: #333;
     display: flex;
-    justify-content: space-between;
+    margin-top: 15px;
+    color: #333;
+    font-size: 1.5rem;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
 }
 
 #totalAmount {
@@ -169,14 +172,19 @@
     background-color: #aaa;
 }
 
+.menu-body {
+    background-color: #ecf8f8;
+}
+
 
 .notification {
     position: fixed;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #28a745; /* Green color */
-    color: white;
+    background-color: #28a745;
+    /* Green color */
+    color: Blac;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 16px;
@@ -194,18 +202,22 @@
 }
 
 /* Header Styles */
-header {
-    background-color: #b18821; 
-    color: #025606;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
+.container {
     top: 0;
+    margin: -1px;
+    color: #220901;
+    position: static;
+    width: 100%;
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    background-color: #eee4e1;
+    justify-content: space-around;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header .logo {
+.container h1 {
     float: left;
     font-size: 1.8rem;
     font-weight: 700;
@@ -213,24 +225,45 @@ header .logo {
     text-transform: uppercase;
 }
 
-header nav ul {
-    list-style: none;
-    float: right;
+button {
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    a:hover {
+        color: #000;
+        text-decoration: none;
+    }
+
 }
 
-header nav ul li {
-    display: inline-block;
-    margin-left: 20px;
+.logout-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-header nav ul li a {
-    color: #02412a;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
+.logout-btn:hover {
+    background-color: #e63946;
 }
 
-header nav ul li a:hover {
-    color: #1125a7;
+.logout-btn:active {
+    background-color: #c0262e;
+    transform: scale(0.98);
 }
 
+.logout-div {
+    width: 25%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}

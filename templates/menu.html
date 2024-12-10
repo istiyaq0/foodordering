@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <header>
-        <div class="container">
-            <h1 class="logo">SUBHAN DELIGHTs</h1>
-        </div>
-    </header>
+
 
 <head>
-    <h1>Welcome {{ session.username }}</h1>
-    <h1>Menu</h1>
+    <title>Menu</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />   
-    
 </head>
-<body>
-    <h2>Welcome {{ session.username }}</h2>
-    <div class="menu-section" >
+
+<body style="margin: 0;" class="menu-body">
+    <div class="container">
+        <h1>SUBHAN DELIGHTs</h1>
+
+        <div class="logout-div">
+            <h4>{{ session.username }}</h4>
+            <button class="logout-btn"> <a href="/logout" class="te"> Logout</a></button>
+        </div>
+    </div>
+    
+    <div class="menu-section">
+
         <h1>Menu</h1>
+
         <div class="menu-list">
             <!-- Each menu item as a row -->
             <div class="menu-item">
@@ -30,10 +35,7 @@
 
                 <!--<button onclick="addToOrder('Burger', 12)">Add to Order</button>
                 -->
-            
-            
-            
-            
+
             </div>
             <div class="menu-item">
                 <img src="{{ url_for('static', filename='curry.jpg')}}" alt="Curry">
