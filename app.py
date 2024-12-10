@@ -14,6 +14,14 @@ def home():
         return redirect(url_for('menu'))
     return render_template("home.html")
 
+@app.route("/register")
+def registerapp():
+    session.pop('username', None)
+
+    if 'username' in session:
+        return redirect(url_for('menu'))
+    return render_template("register.html")
+
 # Login
 @app.route("/register", methods=['POST'])
 def register():
