@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
 
-
 <head>
     <title>Menu</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}" /> 
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />   
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
 </head>
 
 <body style="margin: 0;" class="menu-body">
@@ -17,7 +15,7 @@
             <button class="logout-btn"> <a href="/logout" class="te"> Logout</a></button>
         </div>
     </div>
-    
+
     <div class="menu-section">
 
         <h1>Menu</h1>
@@ -25,7 +23,7 @@
         <div class="menu-list">
             <!-- Each menu item as a row -->
             <div class="menu-item">
-                <img src="{{ url_for('static', filename='burger.jpg')}}"  alt="Brger">
+                <img src="{{ url_for('static', filename='burger.jpg')}}" alt="Brger">
                 <div class="menu-details">
                     <p>Burger</p>
                     <span>$12</span>
@@ -133,7 +131,7 @@
                     <span>$25</span>
                 </div>
                 <button onclick="addToOrder('Peking Duck', 25)">Add to Order</button>
-            </div>            
+            </div>
             <div class="menu-item">
                 <img src="{{ url_for('static', filename='chocolate_lava_cake.jpg')}}" alt="Choco Lava">
                 <div class="menu-details">
@@ -148,19 +146,32 @@
 
 
     <div class="total-section">
-        
-        <h3>Your Order:</h3>
-        <div id="orderContainer">
-            <ul id="orderSummary"></ul>
+
+        <div>
+
+            <h3>Your Order:</h3>
+
+            <div id="orderContainer">
+                <ul id="orderSummary"></ul>
+            </div>
         </div>
-        <div class="tax-section"></div>
-        <h4>Tax (7.5%):</h4>
-        <span id="taxAmount">$0.00</span>
+
+        <div>
+
+            <div class="tax-section"></div>
+
+            <h4>Tax (7.5%):</h4>
+
+            <span id="taxAmount">$0.00</span>
+        </div>
+
 
         <div class="final-total-section">
             <h3>Total Amount:</h3>
             <span id="totalAmount">$0.00</span>
         </div>
+
+
         <form method="POST" action="/place_order">
             <input type="hidden" id="order_details" name="order_details">
             <input type="hidden" id="total_price" name="total_price">
@@ -168,24 +179,23 @@
         </form>
     </div>
 
-    <script src="script.js"></script>
-
     <script>
         let order = [];
         let totalPrice = 0;
-        let taxAmount=0;
+        let taxAmount = 0;
 
         function addToOrder(itemName, itemPrice) {
             order.push({ name: itemName, price: itemPrice });
-            
-            var salesTax = Math.round(((itemPrice / 100) * 7.5)*100)/100;
-             totalPrice += (itemPrice*1) + (salesTax * 1);
-             taxAmount += salesTax;
+
+            var salesTax = Math.round(((itemPrice / 100) * 7.5) * 100) / 100;
+            totalPrice += (itemPrice * 1) + (salesTax * 1);
+            taxAmount += salesTax;
             updateOrderSummary();
         }
-    
+
 
         function updateOrderSummary() {
+
             const orderSummary = document.getElementById("orderSummary");
             orderSummary.innerHTML = "";
 
@@ -201,5 +211,7 @@
             document.getElementById("total_price").value = totalPrice.toFixed(2);
         }
     </script>
+
 </body>
+
 </html>

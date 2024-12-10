@@ -118,53 +118,6 @@ body {
     overflow-x: hidden;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    max-width: 1200px;
-}
-
-/* Header Styles */
-header {
-    background-color: #b18821; 
-    color: #025606;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-header .logo {
-    float: left;
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-header nav ul {
-    list-style: none;
-    float: right;
-}
-
-header nav ul li {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-header nav ul li a {
-    color: #02412a;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-header nav ul li a:hover {
-    color: #1125a7;
-}
-
 /* Hero Section */
 .hero {
     background: url('hero-bg.jpg') no-repeat center center/cover;
