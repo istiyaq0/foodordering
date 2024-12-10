@@ -8,9 +8,29 @@ app.secret_key = 'your_secret_key'
 # Home Page
 @app.route("/")
 def home():
+    session.pop('username', None)
+
     if 'username' in session:
         return redirect(url_for('menu'))
     return render_template("home.html")
+
+# Login
+@app.route("/register", methods=['POST'])
+def register():
+
+    username = request.form['username']
+    password = request.form['password']
+
+    with sqlite3.connect("restaurant1213.db") as con:
+        cur = con.cursor()
+
+        cur.execute("INSERT INTO users (username, password) VALUES ('" + username + "', '" + password + "')")
+
+        con.commit()
+
+        session['username'] = username
+        
+        return redirect(url_for('menu'))
 
 # Login
 @app.route("/login", methods=['POST'])
