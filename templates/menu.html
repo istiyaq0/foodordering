@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <div class="container">
+            <h1 class="logo">SUBHAN DELIGHTs</h1>
+        </div>
+    </header>
+
+<head>
+    <h1>Welcome {{ session.username }}</h1>
+    <h1>Menu</h1>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />   
+    
+</head>
+<body>
+    <h2>Welcome {{ session.username }}</h2>
+    <div class="menu-section" >
+        <h1>Menu</h1>
+        <div class="menu-list">
+            <!-- Each menu item as a row -->
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='burger.jpg')}}"  alt="Brger">
+                <div class="menu-details">
+                    <p>Burger</p>
+                    <span>$12</span>
+                </div>
+
+                <button class="cuisine-button" data-cuisine="Burger" data-price="12" onclick="addToOrder('Burger', 12)">
+                    Add to Order</button>
+
+                <!--<button onclick="addToOrder('Burger', 12)">Add to Order</button>
+                -->
+            
+            
+            
+            
+            </div>
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='curry.jpg')}}" alt="Curry">
+                <div class="menu-details">
+                    <p>Curry</p>
+                    <span>$9</span>
+                </div>
+                <button onclick="addToOrder('Curry', 9)">Add to Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='pizza.jpg')}}" alt="Pizza">
+                <div class="menu-details">
+                    <p>Pizza</p>
+                    <span>$15</span>
+                </div>
+                <button onclick="addToOrder('Pizza', 15)">Add to Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='pasta.jpg')}}" alt="Pasta">
+                <div class="menu-details">
+                    <p>Pasta</p>
+                    <span>$16</span>
+                </div>
+                <button onclick="addToOrder('Pasta', 16)">Add to Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='sushi_rolls.jpg')}}" alt="Sushi Rolls">
+                <div class="menu-details">
+                    <p>Sushi Rolls</p>
+                    <span>$16</span>
+                </div>
+                <button onclick="addToOrder('Sushi Rolls', 16)">Add to Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='grilled_chickenjpg.jpg')}}" alt="Grilled Chicken">
+                <div class="menu-details">
+                    <p>Grilled Chicken</p>
+                    <span>$14</span>
+                </div>
+                <button onclick="addToOrder('Grilled Chicken', 14)">Add to Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='vegetable_stirfry.jpg')}}" alt="Vegetable Stir-Fry">
+                <div class="menu-details">
+                    <p>Vegetable Stir-Fry</p>
+                    <span>$9</span>
+                </div>
+                <button onclick="addToOrder('Vegetable Stir-Fry', 9)">Add to Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='fish_tacos.jpg')}}" alt="Fish Tacos">
+                <div class="menu-details">
+                    <p>Fish Tacos</p>
+                    <span>$12</span>
+                </div>
+                <button onclick="addToOrder('Fish Tacos', 12)">Add to Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='steak.jpg')}}" alt="Steak">
+                <div class="menu-details">
+                    <p>Steak</p>
+                    <span>$20</span>
+                </div>
+                <button onclick="addToOrder('Steak', 20)">Add to Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='falafel.jpg')}}" alt="Falafel">
+                <div class="menu-details">
+                    <p>Falafel</p>
+                    <span>$8</span>
+                </div>
+                <button onclick="addToOrder('Falafel', 8)">Add to Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='biryani.jpg')}}" alt="Biryani">
+                <div class="menu-details">
+                    <p>Biryani</p>
+                    <span>$16</span>
+                </div>
+                <button onclick="addToOrder('Biryani', 18)">Add to Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='margarita_pizza.jpg')}}" alt="Margarita Pizza">
+                <div class="menu-details">
+                    <p>Margarita Pizza</p>
+                    <span>$12</span>
+                </div>
+                <button onclick="addToOrder('Margarita Pizza', 12)">Add to Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='peking_duck.jpg')}}" alt="Peking Duck">
+                <div class="menu-details">
+                    <p>Peking Duck</p>
+                    <span>$25</span>
+                </div>
+                <button onclick="addToOrder('Peking Duck', 25)">Add to Order</button>
+            </div>            
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='chocolate_lava_cake.jpg')}}" alt="Choco Lava">
+                <div class="menu-details">
+                    <p>Chocolate Lava Cake</p>
+                    <span>$7</span>
+                </div>
+                <button onclick="addToOrder('Chocolate Lava', 7)">Add to Order</button>
+            </div>
+            <!-- Add other menu items here -->
+        </div>
+    </div>
+
+
+    <div class="total-section">
+        
+        <h3>Your Order:</h3>
+        <div id="orderContainer">
+            <ul id="orderSummary"></ul>
+        </div>
+        <div class="tax-section"></div>
+        <h4>Tax (7.5%):</h4>
+        <span id="taxAmount">$0.00</span>
+
+        <div class="final-total-section">
+            <h3>Total Amount:</h3>
+            <span id="totalAmount">$0.00</span>
+        </div>
+        <form method="POST" action="/place_order">
+            <input type="hidden" id="order_details" name="order_details">
+            <input type="hidden" id="total_price" name="total_price">
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        let order = [];
+        let totalPrice = 0;
+
+        function addToOrder(itemName, itemPrice) {
+            order.push({ name: itemName, price: itemPrice });
+            
+            var salesTax = Math.round(((itemPrice / 100) * 7.5)*100)/100;
+             totalPrice += (itemPrice*1) + (salesTax * 1);
+            updateOrderSummary();
+        }
+
+        function updateOrderSummary() {
+            const orderSummary = document.getElementById("orderSummary");
+            orderSummary.innerHTML = "";
+
+            order.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = `${item.name} - $${item.price}`;
+                orderSummary.appendChild(li);
+            });
+
+            document.getElementById("totalAmount").textContent = totalPrice.toFixed(2);
+            document.getElementById("order_details").value = JSON.stringify(order);
+            document.getElementById("total_price").value = totalPrice.toFixed(2);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SUBHAN DELIGHTs - International Cuisine</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}" /> 
+    <script src="scripts.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1 class="logo">SUBHAN DELIGHTs</h1>
+             </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Experience the World on a Plate</h2>
+            <p>Authentic cuisines from around the globe, crafted by world-class chefs.</p>
+            <a href="#order" class="btn">Order Now</a>
+        </div>
+    </section>
+
+    <!-- Cuisines Section (Updated with Full Menu) -->
+    <section id="cuisines" class="section">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="cuisine-grid">
+                <!-- Menu Items -->
+<section id="menu">
+    <div class="container">
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='chicken-breast.jpg')}}" alt="Chicken Breast">
+                <div class="menu-info">
+                    <h3>Grilled Chicken Breast</h3>
+                    <p class="description">Juicy, tender chicken breast with herb seasoning.</p>
+                    <p class="price">$12.99</p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='banana.jpg')}}"  alt="Banana Split">
+                <div class="menu-info">
+                    <h3>Banana Split</h3>
+                    <p class="description">Classic dessert with fresh bananas, ice cream, and toppings.</p>
+                    <p class="price">$8.50</p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='salmon.jpg')}}"  alt="Salmon Fillet">
+                <div class="menu-info">
+                    <h3>Baked Salmon Fillet</h3>
+                    <p class="description">Perfectly baked salmon with lemon and dill sauce.</p>
+                    <p class="price">$15.99</p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='lobsters.jpg')}}"  alt="Grilled Lobster">
+                <div class="menu-info">
+                    <h3>Grilled Lobster</h3>
+                    <p class="description">Succulent lobster grilled to perfection with butter sauce.</p>
+                    <p class="price">$30.99</p>
+                </div>
+            </div>
+
+            <!-- New 8 Menu Items -->
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='steak.jpg')}}"  alt="Steak">
+                <div class="menu-info">
+                    <h3>Prime Rib Steak</h3>
+                    <p class="description">Tender prime rib steak cooked to your liking, served with mashed potatoes.</p>
+                    <p class="price">$25.99</p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='pizza.jpg')}}"  alt="Margherita Pizza">
+                <div class="menu-info">
+                    <h3>Margherita Pizza</h3>
+                    <p class="description">Classic pizza with fresh mozzarella, tomatoes, and basil.</p>
+                    <p class="price">$10.99</p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='burger.jpg')}}"  alt="Cheeseburger">
+                <div class="menu-info">
+                    <h3>Classic Cheeseburger</h3>
+                    <p class="description">Beef patty with melted cheese, lettuce, tomato, and special sauce.</p>
+                    <p class="price">$9.99</p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='pasta.jpg')}}" alt="Spaghetti Carbonara">
+                <div class="menu-info">
+                    <h3>Spaghetti Carbonara</h3>
+                    <p class="description">Creamy spaghetti with pancetta, egg, and Parmesan cheese.</p>
+                    <p class="price">$13.99</p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='veggie-salad.jpg')}}" alt="Garden Salad">
+                <div class="menu-info">
+                    <h3>Garden Salad</h3>
+                    <p class="description">Fresh mixed greens, cucumbers, tomatoes, and vinaigrette dressing.</p>
+                    <p class="price">$7.99</p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='shrimp.jpg')}}" alt="Garlic Shrimp">
+                <div class="menu-info">
+                    <h3>Garlic Butter Shrimp</h3>
+                    <p class="description">Shrimp sautéed in garlic butter, served with rice pilaf.</p>
+                    <p class="price">$17.99</p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='chocolate-cake.jpg')}}" alt="Chocolate Cake">
+                <div class="menu-info">
+                    <h3>Chocolate Lava Cake</h3>
+                    <p class="description">Rich chocolate cake with a molten chocolate center.</p>
+                    <p class="price">$6.99</p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="{{ url_for('static', filename='ice-cream.jpg')}}" alt="Ice Cream">
+                <div class="menu-info">
+                    <h3>Vanilla Bean Ice Cream</h3>
+                    <p class="description">Creamy vanilla ice cream with real vanilla beans.</p>
+                    <p class="price">$4.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Style for Menu Section -->
+<style>
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+        gap: 20px;
+    }
+
+    .menu-item img {
+        width: 100%; 
+        height: 200px; 
+        object-fit: cover; 
+        border-radius: 10px; 
+    }
+
+    .menu-info {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .price {
+        font-weight: bold;
+        color: #d35400; 
+    }
+</style>
+
+                  
+                <!-- Add the remaining items in the same pattern... -->
+            </div>
+        </div>
+    </section>
+<!-- Chefs Section -->
+<section id="chefs" class="section dark-bg">
+    <div class="container">
+        <h2>Our Master Chefs</h2>
+        <div class="chef-grid">
+            <div class="chef-item">
+                <img src="{{ url_for('static', filename='chef1.jpg')}}" alt="Chef Antonio Ricci">
+                <h3>Chef Antonio Ricci</h3>
+                <p>Specialized in Italian cuisine with over 20 years of experience. Known for his exquisite pasta dishes and authentic flavors from Sicily.</p>
+            </div>
+            <div class="chef-item">
+                <img src="{{ url_for('static', filename='chef2.jpg')}}" alt="Chef Priya Patel">
+                <h3>Chef Priya Patel</h3>
+                <p>Master of traditional and modern Indian cuisine with 15 years of culinary expertise. Famous for her creative fusion of regional spices and international techniques.</p>
+            </div>
+            <div class="chef-item">
+                <img src="{{ url_for('static', filename='chef3.jpg')}}" alt="Chef Kenji Nakamura">
+                <h3>Chef Kenji Nakamura</h3>
+                <p>With 18 years of experience, Chef Kenji is a master of traditional and modern Japanese cuisine, known for his precision in sushi and sashimi preparation.</p>
+            </div>
+            <div class="chef-item">
+                <img src="{{ url_for('static', filename='chef4.jpg')}}" alt="Chef Omar Al-Farsi">
+                <h3>Chef Omar Al-Farsi</h3>
+                <p>A renowned chef in Arabian cuisine, Chef Omar brings 25 years of experience in preparing traditional Middle Eastern dishes, with a focus on grilled meats and rich spices.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+   
+    .chef-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .chef-item {
+        text-align: center;
+    }
+
+    .chef-item img {
+        width: 200px; 
+        height: 200px; 
+        object-fit: cover; 
+        border-radius: 50%; 
+        margin-bottom: 10px;
+    }
+
+    .chef-item h3 {
+        margin-top: 0;
+    }
+</style>
+
+    <!-- Locations Section -->
+    <section id="locations" class="section">
+        <div class="container">
+            <h2>Our Locations</h2>
+            <div class="location-grid">
+                <div class="location-item">
+                    <h3>New York, USA</h3>
+                    <p>123 5th Ave, New York, NY 10001</p>
+                </div>
+                <div class="location-item">
+                    <h3>Tokyo, Japan</h3>
+                    <p>456 Ginza Street, Tokyo 104-0061</p>
+                </div>
+                <div class="location-item">
+                    <h3>Rome, Italy</h3>
+                    <p>789 Via del Corso, Rome, RM 00187</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Order Online Section -->
+<section id="order" class="section dark-bg">
+    <div class="container">
+        <h2>Order Online</h2>
+        <p>Enjoy your favorite meals from the comfort of your home.</p>
+        <form id="order-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="cuisine">Choose Cuisine:</label>
+            <select id="cuisine" name="cuisine" required>
+                <option value="chicken-breast" data-price="12.99">Grilled Chicken Breast - $12.99</option>
+                <option value="banana-split" data-price="8.50">Banana Split - $8.50</option>
+                <option value="salmon-fillet" data-price="15.99">Baked Salmon Fillet - $15.99</option>
+                <option value="grilled-lobster" data-price="30.99">Grilled Lobster - $30.99</option>
+                <option value="prime-rib-steak" data-price="25.99">Prime Rib Steak - $25.99</option>
+                <option value="margherita-pizza" data-price="10.99">Margherita Pizza - $10.99</option>
+                <option value="classic-cheeseburger" data-price="9.99">Classic Cheeseburger - $9.99</option>
+                <option value="spaghetti-carbonara" data-price="13.99">Spaghetti Carbonara - $13.99</option>
+                <option value="garden-salad" data-price="7.99">Garden Salad - $7.99</option>
+                <option value="garlic-butter-shrimp" data-price="17.99">Garlic Butter Shrimp - $17.99</option>
+                <option value="chocolate-lava-cake" data-price="6.99">Chocolate Lava Cake - $6.99</option>
+                <option value="vanilla-bean-ice-cream" data-price="4.99">Vanilla Bean Ice Cream - $4.99</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" required>
+
+            <label for="order-details">Order Details:</label>
+            <textarea id="order-details" name="order-details" required></textarea>
+
+            <p>Total Price: $<span id="total-price">12.99</span></p>
+
+            <button type="submit" class="btn">Place Order</button>
+        </form>
+    </div>
+</section>
+
+<!-- JavaScript to Update Total Price Based on Selection -->
+<script>
+    const cuisineSelect = document.getElementById('cuisine');
+    const quantityInput = document.getElementById('quantity');
+    const totalPriceElement = document.getElementById('total-price');
+
+    // Function to update total price
+    function updateTotalPrice() {
+        const selectedOption = cuisineSelect.options[cuisineSelect.selectedIndex];
+        const price = parseFloat(selectedOption.getAttribute('data-price'));
+        const quantity = parseInt(quantityInput.value);
+        const totalPrice = (price * quantity).toFixed(2);
+        totalPriceElement.textContent = totalPrice;
+    }
+
+    // Event listeners to update price when cuisine or quantity changes
+    cuisineSelect.addEventListener('change', updateTotalPrice);
+    quantityInput.addEventListener('input', updateTotalPrice);
+</script>
+
+<!-- Gallery Section -->
+<section id="gallery" class="section">
+    <div class="container">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <img src="{{ url_for('static', filename='Delicious.jpg')}}" alt="Delicious Dish" class="animated-img">
+            <img src="{{ url_for('static', filename='planting.jpg')}}" alt="Plating Masterpiece" class="animated-img">
+            <img src="{{ url_for('static', filename='panak.jpg')}}" alt="Panak">
+            <img src="{{ url_for('static', filename='pasta.jpg')}}" alt="Pasta">
+            <img src="{{ url_for('static', filename='sushi.jpg')}}" alt="Sushi">
+            <img src="{{ url_for('static', filename='tempura.jpg')}}" alt="Tempura">
+			<img src="{{ url_for('static', filename='lobsters.jpg')}}" alt="Salmon Fillet">
+			<img src="{{ url_for('static', filename='salmon.jpg')}}" alt="Salmon Fillet">
+			<img src="{{ url_for('static', filename='banana.jpg')}}" alt="Banana Split">
+			<img src="{{ url_for('static', filename='chicken-breast.jpg')}}" alt="Chicken Breast">
+			<img src="{{ url_for('static', filename='cake2.jpg')}}" alt="cake">
+			<img src="{{ url_for('static', filename='shrimp2.jpg')}}" alt="Vanilla Bean Ice cream">
+			
+        </div>
+    </div>
+</section>
+
+<!-- Style for the Gallery Section -->
+<style>
+    /* Gallery Grid Layout */
+    .gallery-grid {
+        display: grid;
+        gap: 20px;
+    }
+
+    .gallery-grid img {
+        width: 100%; 
+        height: 250px; 
+        object-fit: cover; 
+        border-radius: 10px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        transition: transform 0.3s ease; 
+    }
+
+    /* Optional hover effect */
+    .gallery-grid img:hover {
+        transform: scale(1.05); 
+    }
+</style>
+
+    <!-- Offers Section -->
+    <section id="offers" class="section dark-bg">
+        <div class="container">
+            <h2>Special Offers</h2>
+            <div class="offer-grid">
+                <div class="offer-item">
+                    <h3>20% Off All Orders</h3>
+                    <p>Get 20% off your entire order when you dine with us on weekdays.</p>
+                </div>
+                <div class="offer-item">
+                    <h3>Free Dessert</h3>
+                    <p>Enjoy a complimentary dessert with every online order.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation System -->
+    <section id="reservation" class="section">
+        <div class="container">
+            <h2>Make a Reservation</h2>
+            <form id="reservation-form">
+                <label for="res-name">Name:</label>
+                <input type="text" id="res-name" name="res-name" required>
+
+                <label for="res-date">Date:</label>
+                <input type="date" id="res-date" name="res-date" required>
+
+                <label for="res-time">Time:</label>
+                <input type="time" id="res-time" name="res-time" required>
+
+                <label for="res-people">Number of People:</label>
+                <input type="number" id="res-people" name="res-people" required>
+
+                <button type="submit" class="btn">Reserve Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="section dark-bg">
+        <div class="container">
+            <h2>Customer Reviews</h2>
+            <form id="review-form">
+                <label for="review-name">Name:</label>
+                <input type="text" id="review-name" name="review-name" required>
+
+                <label for="rating">Rating (1-5):</label>
+                <input type="number" id="rating" name="rating" min="1" max="5" required>
+
+                <label for="review-text">Review:</label>
+                <textarea id="review-text" name="review-text" required></textarea>
+
+                <button type="submit" class="btn">Submit Review</button>
+            </form>
+
+            <div id="review-list"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; Owned by: ABDUL SUBHAN MOHAMMED DELIGHTs. Mobile: (929)-278-1196 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
