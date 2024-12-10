@@ -170,14 +170,17 @@
     <script>
         let order = [];
         let totalPrice = 0;
+        let taxAmount=0;
 
         function addToOrder(itemName, itemPrice) {
             order.push({ name: itemName, price: itemPrice });
             
             var salesTax = Math.round(((itemPrice / 100) * 7.5)*100)/100;
              totalPrice += (itemPrice*1) + (salesTax * 1);
+             taxAmount += salesTax;
             updateOrderSummary();
         }
+    
 
         function updateOrderSummary() {
             const orderSummary = document.getElementById("orderSummary");
@@ -190,6 +193,7 @@
             });
 
             document.getElementById("totalAmount").textContent = totalPrice.toFixed(2);
+            document.getElementById("taxAmount").textContent = taxAmount.toFixed(2);
             document.getElementById("order_details").value = JSON.stringify(order);
             document.getElementById("total_price").value = totalPrice.toFixed(2);
         }

@@ -1,3 +1,4 @@
+import json
 from flask import Flask, render_template, request, redirect, url_for, session
 import sqlite3
 from datetime import datetime
@@ -86,6 +87,7 @@ def place_order():
     
     order_details = request.form['order_details']
     total_price = request.form['total_price']
+    #taxAmount=request.form['taxAmount']
     customer_name = session['username']
     
     with sqlite3.connect("restaurant1213.db") as con:
@@ -93,8 +95,25 @@ def place_order():
         cur.execute("INSERT INTO orders (customer_name, order_details, total_price) VALUES (?, ?, ?)", 
                     (customer_name, order_details, total_price))
         con.commit()
+       
+
+    # Input JSON string
+    json_string = order_details
+
+    # Parse the JSON string into a Python list of dictionaries
+    items = json.loads(json_string)
+
+    # Access the first item in the list
+    item = items[0]  # {'name': 'Burger', 'price': 12}
+    name = item['name']  # "Burger"
+    price = item['price']  # 12
+
+    # Output the variables
+    print("Name:", name)
+    print("Price:", price)
+
     
-    return render_template("order_confirmation.html", order_details=order_details, total_price=total_price)
+    return render_template("order_confirmation.html", name=name, price=price, total_price=total_price)
 
 # View Orders
 @app.route("/orders")
