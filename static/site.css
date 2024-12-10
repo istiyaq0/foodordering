@@ -224,14 +224,22 @@ p {
 
 /* Total Section */
 .total-section {
-    display: flex;
-    margin-top: 15px;
     color: #333;
     font-size: 1.5rem;
-    flex-direction: row;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: space-around;
+}
+
+.total-section form{
+    width: 15%;
+    text-align: center;
+}
+
+.total-section form button{
+    margin-top: 30px;
+}
+.total-section div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #totalAmount {
@@ -256,6 +264,9 @@ p {
     background-color: #0056b3;
 }
 
+#orderContainer{
+    align-items: center;
+}
 /* Scrollbar for Order List */
 #orderContainer::-webkit-scrollbar {
     width: 8px;

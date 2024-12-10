@@ -18,7 +18,7 @@
 
     <div class="menu-section">
 
-        
+
 
         <div class="menu-list">
             <!-- Each menu item as a row -->
@@ -147,32 +147,31 @@
 
     <div class="total-section">
 
-        <div>
-
-            <h3>Your Order:</h3>
-
-            <div id="orderContainer">
-                <ul id="orderSummary"></ul>
-            </div>
-        </div>
-
-        <div>
-
-            <div class="tax-section"></div>
-
-            <h4>Tax (7.5%):</h4>
-
-            <span id="taxAmount">$0.00</span>
-        </div>
-
-
-        <div class="final-total-section">
-            <h3>Total Amount:</h3>
-            <span id="totalAmount">$0.00</span>
-        </div>
-
-
         <form method="POST" action="/place_order">
+
+            <div>
+                <h3>Your Order:</h3>
+
+                <div id="orderContainer">
+                    <ul id="orderSummary"></ul>
+                </div>
+            </div>
+
+            <div>
+                <div class="tax-section"></div>
+
+                <h4>Tax (7.5%):</h4>
+
+                <span id="taxAmount">$0.00</span>
+            </div>
+
+
+            <div class="final-total-section">
+                <h3>Total Amount:</h3>
+                <span id="totalAmount">$0.00</span>
+            </div>
+
+
             <input type="hidden" id="order_details" name="order_details">
             <input type="hidden" id="total_price" name="total_price">
             <button type="submit">Place Order</button>
