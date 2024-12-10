@@ -113,7 +113,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    background-image: url(background.jpg);
+    background-image: url(backgroubgmenu.webp);
     color: #077222;
     overflow-x: hidden;
 }
@@ -167,7 +167,7 @@ header nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
+    background: url('backgroubgmenu.webp') no-repeat center center/cover;
     height: 100vh;
     color: #ffffff;
     text-align: center;

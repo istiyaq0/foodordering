@@ -9,6 +9,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 800px;
+    flex-wrap: nowrap;
+    top: 50%;
+    align-content: center;
+
+}
+.homebody {
+    display: flex;
+    position: relative;
+    background-image: url(newbg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+
 }
 
 .register-section {
@@ -85,7 +102,7 @@ p {
     padding-top: 0px;
     margin: 30px;
     text-align: center;
-    background-image: url(background.jpg)
+    
 }
 
 .menu-list {
