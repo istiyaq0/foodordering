@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>SUBHAN DELIGHTs - International Cuisine</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}" />
+    <link href="{{ url_for('static', filename='fonts/Quicksand-Regular.ttf')}}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}" />
 
     <script src="scripts.js" defer></script>
-    <link href="{{ url_for('static', filename='fonts/Quicksand-Regular.ttf')}}" rel="stylesheet">
 </head>
 
-<body class ="homebody">
+<body class="homebody">
     <div class="login-section">
         <form method="POST" action="/login" style="max-width: 800px;">
             <h2 style="text-align: center; font-family: Quicksand-Regular; color: #e09435;">LOGIN!</h2>
